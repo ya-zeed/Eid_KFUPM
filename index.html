@@ -21,7 +21,10 @@
         #text {
             position: absolute;
             top: 390px;
-            left: 397px;
+            left: 300px;
+            text-align: center;
+            font-size: 25px;
+            width: 345px;
         }
     </style>
 </head>
@@ -31,8 +34,12 @@
 
     <div id="tablecontainer">
         <img src="eid.png" alt="">
-        <h2 id="text">يزيد الطويل</h2>
+        <div id="text">
+            عبدالعزيز العبدالعزيز
+        </div>
     </div>
+
+    <input type="text" id="in" dir="rtl" placeholder="ادخل اسمك" onchange="changeText()">
 
 
 
@@ -82,7 +89,9 @@
     }
 
 
-
+    function changeText() {
+        document.querySelector('#text').textContent = document.querySelector('#in').value
+    }
 </script>
 
 </html>
