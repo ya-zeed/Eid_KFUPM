@@ -66,11 +66,11 @@
 
 <script>
 
-    function downloadtable() {
+   async function downloadtable() {
 
         var node = document.getElementById('tablecontainer');
 
-        domtoimage.toPng(node)
+        await domtoimage.toPng(node)
             .then(async function (dataUrl) {
                 var img = new Image();
                 img.src = dataUrl;
